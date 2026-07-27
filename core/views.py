@@ -1,4 +1,13 @@
-from django.http import HttpResponse
+from django.shortcuts import render
 
-def pagina_teste(request):
-    return HttpResponse("<h1>Funcionando! 🎉</h1><p>Django rodando com sucesso.</p>")
+def home(request):
+    return render(request, 'core/home.html')
+
+def sales(request):
+    return render(request, 'core/sales.html')
+
+def stock(request):
+    return render(request, 'core/stock.html')
+
+def control(request):
+    return render(request, 'core/control.html')
