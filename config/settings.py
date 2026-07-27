@@ -11,6 +11,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+ROOT_URLCONF = 'config.urls'
+
 # Troque a linha do SECRET_KEY por:
 SECRET_KEY = os.environ.get('SECRET_KEY', 'chave-provisoria-so-para-teste-local')
 
