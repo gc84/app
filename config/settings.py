@@ -24,10 +24,31 @@ DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = ['https://app-wzhs.onrender.com/']  # depois trocamos pelo domínio real
 
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',  # adicione essa linha logo abaixo da anterior
-    # ... resto do middleware que já existe, sem mexer
+    'whitenoise.middleware.WhiteNoiseMiddleware', # Se estiver usando WhiteNoise
+    'django.contrib.sessions.middleware.SessionMiddleware', # Obrigatório
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware', # Obrigatório
+    'django.contrib.messages.middleware.MessageMiddleware', # Obrigatório
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
 STATIC_URL = '/static/'
