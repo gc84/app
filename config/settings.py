@@ -16,7 +16,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'chave-provisoria-so-para-teste-local'
 
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = ['*']  # depois trocamos pelo domínio real
+ALLOWED_HOSTS = ['https://app-wzhs.onrender.com/']  # depois trocamos pelo domínio real
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
