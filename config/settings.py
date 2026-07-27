@@ -7,7 +7,11 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 INSTALLED_APPS = [
-    # ... outros aplicativos ...
+    'django.contrib.admin',  # <--- Adicione esta linha
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
 
