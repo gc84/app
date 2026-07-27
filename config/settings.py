@@ -13,6 +13,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'core',  # <--- Adicione esta linha para o Django reconhecer a pasta templates/core do seu app
 ]
 
 ROOT_URLCONF = 'config.urls'
