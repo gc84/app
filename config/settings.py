@@ -22,7 +22,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'chave-provisoria-so-para-teste-local'
 
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = ['https://app-wzhs.onrender.com/']  # depois trocamos pelo domínio real
+ALLOWED_HOSTS = ['app-wzhs.onrender.com', '.onrender.com', 'localhost', '127.0.0.1']
 
 TEMPLATES = [
     {
